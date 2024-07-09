@@ -12,7 +12,7 @@ Integrantes del grupo Nro 2:
 
 1. Se debe levantar el servicio de la base de datos MySql con Xampp o aplicación similar.
 2. Ingresar al directorio /backend y ejecutar los comandos `npm install` y luego `npm run dev` para levantar el servidor back-end.
-3. En otra terminar, ingresar al directorio /web y ejecutar los comandos `npm install` y luego `npm run dev` para levantar el servicio de front-end.
+3. En otra terminal, ingresar al directorio /web y ejecutar los comandos `npm install` y luego `npm run dev` para levantar el servicio de front-end.
 
 ## Link a youtube
 
