@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import UsersService, { RegisterData } from "../services/UsersService";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/joy";
+import { Toaster, toast } from 'sonner'
 
 export default function Register() {
 
@@ -10,21 +11,27 @@ export default function Register() {
     marginBottom: '10px'
   }
 
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, reset } = useForm()
   const navigate = useNavigate()
 
   const onSubmit = async(data: RegisterData) => {
     try {
       const response = await new UsersService().register(data)
       console.log(response)
+      toast.success('Register success 🎉')
+      reset()
+      await new Promise((resolve) => setTimeout(resolve, 2000))
       navigate('/login')
     } catch (error) {
       console.error(error)
+      toast.warning('The email is already used')
+      reset()
     }
   }
 
   return (
     <main style={{minHeight: '80vh', width: '600px', maxWidth: '90%', margin: 'auto'}}>
+      <Toaster position="top-center" richColors />
       <h2>Register</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack>

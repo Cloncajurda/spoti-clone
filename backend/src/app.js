@@ -10,5 +10,5 @@ app.use(express.json())
 // habilita CORS para permitir solicitudes desde diferentes orígenes (dominios)
 app.use(cors())
 
-// Define una ruta base /api y asigna las rutas definidas en 'api'
+// Define una ruta base /api y asigna las rutas definidas en 'api' http://localhost:3000/api/
 app.use('/api', api)

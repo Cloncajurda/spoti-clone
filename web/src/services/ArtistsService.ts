@@ -11,6 +11,14 @@ export default class AritstsService {
     })
   }
 
+  getOwn() {
+    return axios.get(`${this.baseUrl}/own`, {
+      headers: {
+        Authorization: localStorage.getItem('codetunes-token')
+      }
+    })
+  }
+
   getById(id: string) {
     return axios.get(`${this.baseUrl}/${id}`, {
       headers: {

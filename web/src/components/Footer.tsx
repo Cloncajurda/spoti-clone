@@ -28,6 +28,7 @@ export default function Footer() {
               <li>React</li>
               <li>react-router-dom</li>
               <li>react-hook-form</li>
+              <li>sooner for toast</li>
               <li>Joy UI</li>
             </ul>
           </div>

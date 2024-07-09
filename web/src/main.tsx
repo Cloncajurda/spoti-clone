@@ -7,6 +7,7 @@ import Home from './pages/Home.tsx'
 import Register from './pages/Register.tsx'
 import Login from './pages/Login.tsx'
 import ArtistDetail from './pages/ArtistDetail.tsx'
+import OwnArtistList from './components/OwnArtistList.tsx'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/own',
+        element: <OwnArtistList />
       },
       {
         path: '/artist/:artistId',

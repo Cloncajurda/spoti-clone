@@ -23,7 +23,9 @@ export async function getAll(_, res) {
 export async function ownArtist(req, res) {
   try {
     const artists = await Artist.findAll({
-      userId: req.user.id
+      where: {
+        userId: req.user.id
+      }
     })
     return res.json(artists)
   } catch (error) {

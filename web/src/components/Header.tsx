@@ -43,6 +43,7 @@ export default function Header() {
             : (
               <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                 <p style={{ fontWeight: 'bold' }}>Hola {user}</p>
+                <a href="/own" style={{ color: "black" }} className="link" >Mis artistas</a>
                 <a style={{ color: "black" }} onClick={handleLogout} className="link" >Logout</a>
               </div>
             )
